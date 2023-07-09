@@ -66,13 +66,13 @@ REST-Rant is an app where users can review restaurants.
 </tr>
 <!-- Delete a rant-->
 <tr>
-<td>Delete</td>
+<td>DELETE</td>
 <td>/places/:id/rant/:rantId</td>
 <td>Delete a rant (comment) about a particular place</td>
 </tr>
 <!-- 404 page-->
 <tr>
-<td>GEt</td>
+<td>GET</td>
 <td>*</td>
 <td>404 page (matches any route not defined above)</td>
 </tr>
