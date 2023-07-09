@@ -73,7 +73,7 @@ REST-Rant is an app where users can review restaurants.
 <!-- 404 page-->
 <tr>
 <td>GET</td>
-<td>*</td>
+<td>    *    </td>
 <td>404 page (matches any route not defined above)</td>
 </tr>
 </table>
