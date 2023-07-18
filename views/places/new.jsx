@@ -13,24 +13,26 @@ function new_form () {
               </div>
               <div className="form-group">
                 <label htmlFor="pic">Place Picture</label>
-                <input className="form-control" id="pic" name="pic" />
+                <input className="form-control" id="pic" name="pic" defaultValue={`https://149785820.v2.pressablecdn.com/wp-content/uploads/2020/11/parkside-raleigh-burgers.jpg`} />
               </div>
               <div className="form-group">
                 <label htmlFor="city">City</label>
-                <input className="form-control" id="city" name="city" />
+                <input className="form-control" id="city" name="city" defaultValue={`Anytown`}/>
               </div>
               <div className="form-group">
                 <label htmlFor="state">State</label>
-                <input className="form-control" id="state" name="state" />
+                <input className="form-control" id="state" name="state" defaultValue={`USA`} />
               </div>
               <div className="form-group">
                 <label htmlFor="cuisines">Cuisines</label>
                 <input className="form-control" id="cuisines" name="cuisines" required />
               </div>
+              <div className="form-group">
+                <label for="founded">Founded Year</label>
+                <input className="form-control" id="founded" name="founded"/>
+              </div>
               <input className="btn btn-primary" type="submit" value="Add Place" />
             </form>
-
-
           </main>
         </Def>
     )
