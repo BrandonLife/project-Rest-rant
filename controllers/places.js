@@ -65,7 +65,7 @@ router.put('/:id', async (req, res) => {
  // Dig into req.body and make sure data is valid
  if (!req.body.pic) {
   // Default image if one is not provided
-  req.body.pic = 'http://placekitten.com/400/400'
+  req.body.pic = 'https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/fhvbgmtw/a75b8bf9-f8e2-4903-abd2-08913f774cb1.jpg'
 }
 if (!req.body.city) {
   req.body.city = 'Anytown'
