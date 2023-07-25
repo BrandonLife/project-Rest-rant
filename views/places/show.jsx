@@ -26,7 +26,7 @@ function show (data) {
       <Def>
         <main>
           <div className="row">
-            <img src={data.place.pic} width={50 + "px"} alt="" />
+            <img src={data.place.pic}  alt="" />
           </div>
           <hr />
           <a href={`/places/commentNew/${data.place.id}`} className="btn btn-warning"> 

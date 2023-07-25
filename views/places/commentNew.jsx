@@ -8,7 +8,7 @@ function commentForm (data) {
           <main>
             <h1>Add a New Comment</h1>
           
-            <form method="POST" action={`commentNew/places/${data.id}/comment`}>
+            <form method="POST" action={`/places/${data.id}/comment`}>
               <div className="form-group">
                 <label htmlFor="name">Author</label>
                 <input type='text' className="form-control" id="author" name="author" required />
@@ -18,8 +18,8 @@ function commentForm (data) {
                 <input type='textarea' className="form-control" id="content" name="content" required />
               </div>
               <div className="form-group">
-                <label htmlFor="name">Star Rating</label>
-                <input type='number' step={.5} className="form-control" id="star-rating" name="star-rating" required />
+                <label htmlFor="stars">Star Rating</label>
+                <input type='number' step={.5} className="form-control" id="stars" name="stars" required />
               </div>
               <div className="form-group">
                 <label htmlFor="rant">Rant</label>

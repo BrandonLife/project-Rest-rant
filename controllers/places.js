@@ -70,33 +70,33 @@ router.get('/:id/edit', async (req, res) => {
 })
 
 
-router.post('/commentNew/places/:id/comment', async (req, res) => {
-  console.log(req)
-  req.body.comment = req.body.comment ? true : false
-  let {id}= req.params
-  db.Place.findById(id)
-    .then(place => {
-        db.Comment.create(req.body)
-        .then(comment => {
-            place.comments.push(comment.id)
-            place.save()
-            .then(() => {
-                res.redirect(`/places/${id}`)
-            })
+router.post('/:id/comment', (req, res) => {
+  console.log('post comment', req.body)
+    if (req.body.author === '') { req.body.author = undefined }
+    req.body.comment = req.body.comment ? true : false
+    db.Place.findById(req.params.id)
+        .then(place => {
+            db.Comment.create(req.body)
+                .then(comment => {
+                    place.comments.push(comment.id)
+                    place.save()
+                        .then(() => {
+                            res.redirect(`/places/${req.params.id}`)
+                        })
+                        .catch(err => {
+                            res.render('error404', err)
+                        })
+                })
+                .catch(err => {
+                  console.log(err)
+                    res.render('error404', err)
+                })
         })
         .catch(err => {
           console.log(err)
-            res.render('error404')
+            res.render('error404', err)
         })
-    })
-    .catch(err => {
-      console.log(err)
-        res.render('error404')
-    })
-  
- 
 })
-
 
 router.put('/:id', async (req, res) => {
   let {id}= req.params
